@@ -16,12 +16,8 @@ RUN mix local.hex --force && mix local.rebar --force
 # Baixa as dependências do projeto
 RUN mix deps.get
 
-# Copia o código-fonte principal do projeto para o container
-COPY lib ./lib
-COPY my_deck ./my_deck
-
-# Copia os testes (opcional, remova em produção)
-COPY test ./test
+# Copia todo o conteúdo do projeto para o container
+COPY . .
 
 # Compila o projeto Elixir
 RUN mix compile

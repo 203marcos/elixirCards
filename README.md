@@ -93,3 +93,8 @@ This project is part of the Udemy course:
 **"The Complete Elixir and Phoenix Bootcamp"**  
 Master Functional Programming techniques with Elixir and Phoenix while learning to build compelling web applications.
 
+## Try to see documentation after with
+
+docker run --name cards-docs cards-app mix docs
+docker cp cards-docs:/app/doc ./doc
+docker rm cards-docs
